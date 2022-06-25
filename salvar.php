@@ -95,7 +95,7 @@
 			break;
 		
 		case "excluir":
-			$sql = "DELETE from livros WHERE id=".$_REQUEST["id"];
+			$sql = "DELETE from Livros WHERE id=".$_REQUEST["id"];
 			
 			$res = $conn->query($sql);
 					
@@ -134,7 +134,7 @@
 				print "<script>alert('A data de devolução deve ser depois da data de entrega');</script>";
 				print "<script>location.href='?page=listar-disponiveis';</script>";	
 			}else{			
-				$sql = "INSERT into livrosxalunos(id_livro, id_aluno, data_entrega, data_de_devolucao)
+				$sql = "INSERT into LivrosxAlunos(id_livro, id_aluno, data_entrega, data_de_devolucao)
 							values ('{$id_livro}', '{$id_aluno}', '{$data_entrega}', '{$data_de_devolucao}')";
 							
 				$res = $conn->query($sql);
@@ -162,7 +162,7 @@
 			}
 		
 		case "devolver":
-			$sql = "DELETE from livrosxalunos WHERE id_livro=".$_REQUEST["id"];
+			$sql = "DELETE from LivrosxAlunos WHERE id_livro=".$_REQUEST["id"];
 		
 			$res = $conn->query($sql);
 					

@@ -2,7 +2,7 @@
 <?php
 	$sql = "SELECT * FROM Livros where disponivel like 'Não'";
 	
-	$sql2 = "SELECT * FROM livrosxalunos";
+	$sql2 = "SELECT * FROM LivrosxAlunos";
 	
 	$res = $conn->query($sql);
 	
